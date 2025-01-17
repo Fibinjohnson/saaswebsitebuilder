@@ -28,16 +28,19 @@ export default function RootLayout({
   return (
     <ClerkProvider appearance={{baseTheme:dark}}>
      <html lang="en" suppressHydrationWarning>
-      <ThemeProvider           attribute="class"
+     <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+      <ThemeProvider           
+            attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+   
         {children}
-      </body>
       </ThemeProvider>
+      </body>
+
     </html>
     </ClerkProvider>
   );
